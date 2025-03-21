@@ -11,7 +11,7 @@
 
 - name: Copy nginx
   ansible.builtin.copy:
-    src: nginx.conf
+    src: /home/ec2-user/Ansible-Robo/nginx.conf
     dest: /etc/nginx/nginx.conf
 
 - name: start nginx service
