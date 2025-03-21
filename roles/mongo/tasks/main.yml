@@ -5,8 +5,8 @@
 
 - name: Install mongodb
   ansible.builtin.dnf:
-     name: mongodb-org
-     state: latest
+    name: mongodb-org
+    state: latest
 
 
 - name: update config file
