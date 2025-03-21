@@ -6,8 +6,8 @@
 
 - name: remove old content
   ansible.builtin.file:
-  path: "{{ app_path }}"
-  state: absent
+   path: "{{ app_path }}"
+   state: absent
     
 - name: Create directory
   ansible.builtin.file:
