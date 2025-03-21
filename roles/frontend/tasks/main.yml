@@ -1,5 +1,5 @@
 - name: Disable default nginx module
-  ansible:builtin.shell: dnf module disbale nginx -y
+  ansible.builtin.shell: dnf module disbale nginx -y
 
 - name: Enable nginx 24 vesion
   ansible.builtin.shell: dnnf module enable nginx:1.24 -y
