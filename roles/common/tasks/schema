@@ -10,5 +10,5 @@
      state: latest
 
 - name: Load Master data
-   ansible.built.in.shell: mongosh --host localhost </app/db/master-data.js
+   ansible.built.in.shell: mongosh --host mongo.dev.naifah.online </app/db/master-data.js
 
