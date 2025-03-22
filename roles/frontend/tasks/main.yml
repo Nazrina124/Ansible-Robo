@@ -10,7 +10,7 @@
     state: latest
 
 - name: Copy nginx
-  ansible.builtin.copy:
+  ansible.builtin.template:
     src: nginx.conf
     dest: /etc/nginx/nginx.conf
 
