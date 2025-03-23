@@ -32,6 +32,7 @@
     name: common
     tasks_from: schema
   when: Schema is defined
+
 - name: Set up systemd
   ansible.builtin.include_role:
     name: common
