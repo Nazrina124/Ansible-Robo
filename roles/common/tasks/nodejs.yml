@@ -25,7 +25,7 @@
 - name: install dependencies
   ansible.builtin.shell: npm install
   args:
-     chdir: "{{ app_path }}"
+    chdir: "{{ app_path }}"
 
 - name: Set up schema
   ansible.builtin.include_role:
