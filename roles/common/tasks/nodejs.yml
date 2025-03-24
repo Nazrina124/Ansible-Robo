@@ -17,10 +17,6 @@
     name: common
     tasks_from: app-prereq
 
-- name: Install dependences
-  ansible.builtin.dnf:
-    name: nginx
-    state: latest
 
 - name: install dependencies
   ansible.builtin.shell: npm install
