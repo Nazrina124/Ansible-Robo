@@ -1,9 +1,5 @@
-- name: Set up Nodejs
+- name: Set up Maven
   ansible.builtin.include_role:
     name: common
-    tasks_from: nodejs
+    tasks_from: Java
 
-- name: Systemd
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: systemd

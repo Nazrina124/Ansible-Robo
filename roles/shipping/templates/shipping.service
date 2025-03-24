@@ -2,8 +2,8 @@
 Description=Shipping Service
 [Service]
 User=roboshop
-Environment=CART_ENDPOINT=localhost:8080
-Environment=DB_HOST=localhost
+Environment=CART_ENDPOINT=cart.{{ env }}.naifah.online:8080
+Environment=DB_HOST=mysql.{{ env }}.naifah.online
 ExecStart=/bin/java -jar /app/shipping.jar
 SyslogIdentifier=shipping
 [Install]
