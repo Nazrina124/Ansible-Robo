@@ -18,10 +18,12 @@
     tasks_from: app-prereq
 
 
-- name: install dependencies
+
+- name: install nodejs dependencies
   ansible.builtin.shell: npm install
   args:
     chdir: "{{ app_path }}"
+
 
 - name: Set up schema
   ansible.builtin.include_role:
