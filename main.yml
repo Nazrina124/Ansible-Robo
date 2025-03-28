@@ -1,6 +1,6 @@
-- name: RoboShop Project Playbook
-  hosts: all
-  become: true
-  roles:
+-  name: RoboShop Project Playbook
+   hosts: all
+   become: true
+   roles:
     "{{ role_name }}"
 
