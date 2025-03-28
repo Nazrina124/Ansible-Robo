@@ -11,4 +11,16 @@
 
 - name: Load Master data
   ansible.builtin.shell: mongosh --host mongo.{{ env }}.naifah.online </app/db/master-data.js
+  loop: "{{schema_files}}"
 
+- name: Load mysql schema
+  when: schema == "mysql"
+  block:
+    -name: Install mysql
+    ansible.builtin.dnf:
+      name: mysql
+      state: latest
+
+- name: Load Master Data
+  ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+  loop: "{{schema_files}}"
