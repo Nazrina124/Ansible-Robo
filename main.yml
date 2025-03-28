@@ -2,5 +2,6 @@
   hosts: all
   become: true
   roles:
+  with_items:
     - "{{ role_name }}"
 
