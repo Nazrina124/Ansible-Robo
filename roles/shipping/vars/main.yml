@@ -1,6 +1,6 @@
 component: shipping
 app_path: /app
-
+schema: mysql
 schema_files:
   - schema
   - master-data
