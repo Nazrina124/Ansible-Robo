@@ -16,8 +16,8 @@
 - name: Load mysql schema
   when: schema == "mysql"
   block:
-    -name: Install mysql
-    ansible.builtin.dnf:
+   - name: Install mysql
+     ansible.builtin.dnf:
       name: mysql
       state: latest
 
