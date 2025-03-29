@@ -1,6 +1,6 @@
 component: catalogue
 app_path: /app
-Schema: mongo
+schema: mongo
 schema_files:
   - master-data
 
