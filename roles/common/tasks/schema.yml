@@ -3,8 +3,8 @@
   block:
    - name: Copy repo file
      ansible.builtin.template:
-     src: mongo.repo
-     dest: /etc/yum.repos.d/mongo.repo
+       src: mongo.repo
+       dest: /etc/yum.repos.d/mongo.repo
 
 
 - name: Install mongodb client
@@ -24,6 +24,6 @@
       name: mysql
       state: latest
 
-- name: Load Master Data
-  ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
-  loop: "{{schema_files}}"
+   - name: Load Master Data
+     ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+     loop: "{{schema_files}}"
