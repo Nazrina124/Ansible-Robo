@@ -19,11 +19,11 @@
 - name: Load mysql schema
   when: schema == "mysql"
   block:
-   - name: Install mysql
-     ansible.builtin.dnf:
-      name: mysql
-      state: latest
+    - name: Install mysql
+      ansible.builtin.dnf:
+       name: mysql
+       state: latest
 
-   - name: Load Master Data
-     ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
-     loop: "{{schema_files}}"
+    - name: Load Master Data
+      ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
+      loop: "{{schema_files}}"
