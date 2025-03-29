@@ -21,8 +21,8 @@
   block:
     - name: Install mysql
       ansible.builtin.dnf:
-       name: mysql
-       state: latest
+        name: mysql
+        state: latest
 
     - name: Load Master Data
       ansible.builtin.shell: mysql -h mysql.{{ env }}.naifah.online -uroot -pRoboShop@1 < /app/db/{{ item }}.sql
