@@ -4,6 +4,6 @@ schema: mongo
 schema_files:
   - master-data
 
-secrets: "{{ lookup('hashi_vault', 'secret=roboshop{{ env }}/data/catalogue token={{ vault_token}} url=54.158.92.79:8200 validate_certs=False')}}"
+secrets: "{{ lookup('hashi_vault', 'secret=roboshop{{ env }}/data/catalogue token={{ vault_token}} url=http://vault.naifah.online:8200 validate_certs=False')}}"
 
 
