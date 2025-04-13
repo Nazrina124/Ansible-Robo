@@ -1,2 +1,4 @@
 app_path: /usr/share/nginx/html
 component: mongo
+
+secrets: "{{ lookup('hashi_vault', 'secret=roboshop{{ env }}/data/mongo token={{ vault_token}} url=https://vault-internal.naifah.online:8200 validate_certs=False')}}"
